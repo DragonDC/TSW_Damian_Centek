@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
 
 <head>
-  <title>Prosty klient WebSockets</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="/css/styl.css">
-</head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
 
+    <title>Pong</title>
+    
+    
+</head>
 <body>
-  <div>
+    <td> <input id="newGame" type="button" style="display:none;" value="Nowa gra"> </td>   
+    <td> <input id="endGame" type="button" style="display:none;" value="Zakończ grę"> </td>     
+    <div id="punctation" style="display:none;" >
+<!--
+        <div class="p1">
+            <div class="scoreP1">Player 1 - </div>
+            <div class="scoreP1" id="scoreP1"></div> 
+        </div>
+        
+        <div class="p2">
+            <div class="scoreP1">Player 2 - </div>
+            <div class="scoreP1" id="scoreP2"></div>
+        </div>
+-->
+    </div>       
+   
+    <div>
     <table>
       <tr>
         <td> <img id="status" src="/img/bullet_red.png" width="35"> </td>
@@ -16,15 +34,34 @@
         <td> <input id="close" type="button" value="Rozłącz"> </td>
       </tr>
     </table>
+    
+    <div id="nickWrap" style="display:none;">
+		<p>Podaj nazwe użytkownika:</p>
+		<p id="nickError"></p>
+		<form id="setNick">
+			<input size="35" id="nickname"></input>
+			<input id="submit" type="submit" value="Zaloguj"></input>
+		</form>
+	</div>
+    <div id="Login" style="float: right; display:none;">
+        Zalogowany jako:
+        <p id="userName"> </p>
+    </div>
+    
+    <div id="WriteMessage" style="display:none;">
     <p>
       Komunikat:&nbsp;
       <input id="text">&nbsp;<input id="send" type="button" value="Wyślij">
     </p>
+    </div>
     <p id="message"></p>
+    
   </div>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/skrypt.js"></script>
+        
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skrypt.js"></script>
+    
+        
 </body>
-
 </html>

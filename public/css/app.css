@@ -1,1 +1,30 @@
 body{background-color:#eee}
+
+canvas {
+    position: absolute;
+    margin: auto;
+    top: 20px;
+    bottom: 20px;
+    left: 50px;
+    right: 0;
+}
+        
+#punctation{
+    width: 10%;
+    margin: auto; 
+    height: 40px;
+}
+        
+.p1{
+    border: 1px solid red; 
+
+}
+        
+.scoreP1{
+    display: inline-block;   
+}
+
+.scoreP2{
+    display: inline-block;         
+}
+
