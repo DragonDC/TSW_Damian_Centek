@@ -1,7 +1,6 @@
 var IO = null;
 var DB = null;
 
-var moves = {};
 
 var join = function(gameID) {
 
@@ -84,33 +83,9 @@ var move = function(data) {
   IO.sockets.in(data.gameID).emit('update', game);
 
   console.log('Cos ' + data.gameID+' '+sess.playerName+': '+data.move);
-  var currentdate = new Date();
-  var datetime = '[ ' + (currentdate.getHours() < 10 ? '0' + currentdate.getHours() : currentdate.getHours())
-                    + ':' +
-                    (currentdate.getMinutes() < 10 ? '0' + currentdate.getMinutes() : currentdate.getMinutes()) + ' ]';   
-    
-  //this.emit('ruch', data.move);
-  if (!moves[data.gameID]) {
-    moves[data.gameID] = [];
-  }
   
-  var movements = data.move;    
-  var colorSign = movements.substring(0,1);
-  var color = null;
-  if(colorSign === 'w'){
-    color = 'Biały';      
-  }
-  else{
-    color = 'Czarny'    
-  }
- 
-  var pawn = movements.substring(1,2);
-  var startAndDestination = movements.substring(2,7)    
-    
-  moves[data.gameID].push('<br />' + '   ' + color + ' - ' + pawn + ' - {' + startAndDestination +'} - '+ datetime);
-/*  moves[data.gameID].push(datetime);    
-  moves[data.gameID].push('<br />');  */  
-  IO.sockets.in(data.gameID).emit('ruchy', moves[data.gameID] );
+  this.emit('ruch', data.move);
+  
 };
 
 

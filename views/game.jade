@@ -6,178 +6,180 @@ block content
     .navbar-header
       a.navbar-brand(href="/") Gra -> Strona główna
 
-  div.container
 
-    #messages
+  div.container    
+    .col-sm-6
+        #messages
 
-    #game
+    .col-sm-6
+        #game
 
-      #title-bar
-        button#forfeit.btn.btn-sm.btn-default.pull-right Zakończ
-        span ID Stołu:&nbsp;
-        strong #{gameID}
+          #title-bar
+            button#forfeit.btn.btn-sm.btn-default.pull-right Zakończ
+            span ID Stołu:&nbsp;
+            strong #{gameID}
 
-      #opponent.player-info
-        strong ...
-        span.status.pull-right
-        ul.captured-pieces.list-inline
+          #opponent.player-info
+            strong ...
+            span.status.pull-right
+            ul.captured-pieces.list-inline
 
-      table#board
-        tr
-          td.top-left-corner
-          td.top-edge
-          td.top-edge
-          td.top-edge
-          td.top-edge
-          td.top-edge
-          td.top-edge
-          td.top-edge
-          td.top-edge
-          td.top-right-corner
-        tr
-          td.left-edge
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.right-edge
-        tr
-          td.left-edge
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.right-edge
-        tr
-          td.left-edge
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.right-edge
-        tr
-          td.left-edge
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.right-edge
-        tr
-          td.left-edge
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.right-edge
-        tr
-          td.left-edge
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.right-edge
-        tr
-          td.left-edge
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.right-edge
-        tr
-          td.left-edge
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.square
-          td.right-edge
-        tr
-          td.bottom-left-corner
-          td.bottom-edge
-          td.bottom-edge
-          td.bottom-edge
-          td.bottom-edge
-          td.bottom-edge
-          td.bottom-edge
-          td.bottom-edge
-          td.bottom-edge
-          td.bottom-right-corner
+          table#board
+            tr
+              td.top-left-corner
+              td.top-edge
+              td.top-edge
+              td.top-edge
+              td.top-edge
+              td.top-edge
+              td.top-edge
+              td.top-edge
+              td.top-edge
+              td.top-right-corner
+            tr
+              td.left-edge
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.right-edge
+            tr
+              td.left-edge
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.right-edge
+            tr
+              td.left-edge
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.right-edge
+            tr
+              td.left-edge
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.right-edge
+            tr
+              td.left-edge
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.right-edge
+            tr
+              td.left-edge
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.right-edge
+            tr
+              td.left-edge
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.right-edge
+            tr
+              td.left-edge
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.square
+              td.right-edge
+            tr
+              td.bottom-left-corner
+              td.bottom-edge
+              td.bottom-edge
+              td.bottom-edge
+              td.bottom-edge
+              td.bottom-edge
+              td.bottom-edge
+              td.bottom-edge
+              td.bottom-edge
+              td.bottom-right-corner
 
-      #you.player-info
-        strong ...
-        span.status.pull-right
-        ul.captured-pieces.list-inline
+          #you.player-info
+            strong ...
+            span.status.pull-right
+            ul.captured-pieces.list-inline
 
 
 
-    #game-over.modal.fade(role="dialog")
-      .modal-dialog
-        .modal-content
-          .modal-body.text-center
-            h2.alert
-          .modal-footer
-            a.btn.btn-primary(href="/") Dalej
+        #game-over.modal.fade(role="dialog")
+          .modal-dialog
+            .modal-content
+              .modal-body.text-center
+                h2.alert
+              .modal-footer
+                a.btn.btn-primary(href="/") Dalej
 
-    #pawn-promotion.modal.fade(role="dialog")
-      .modal-dialog
-        .modal-content
-          .modal-body.text-center
-            form
-              h3 Promote Pawn
-              .btn-group(data-toggle="buttons")
-                label.btn.btn-default.knight
-                  input(type="radio", name="promotion", value="N")
+        #pawn-promotion.modal.fade(role="dialog")
+          .modal-dialog
+            .modal-content
+              .modal-body.text-center
+                form
+                  h3 Promote Pawn
+                  .btn-group(data-toggle="buttons")
+                    label.btn.btn-default.knight
+                      input(type="radio", name="promotion", value="N")
 
-                label.btn.btn-default.bishop
-                  input(type="radio", name="promotion", value="B")
+                    label.btn.btn-default.bishop
+                      input(type="radio", name="promotion", value="B")
 
-                label.btn.btn-default.rook
-                  input(type="radio", name="promotion", value="R")
+                    label.btn.btn-default.rook
+                      input(type="radio", name="promotion", value="R")
 
-                label.btn.btn-default.queen.active
-                  input(type="radio", name="promotion", value="Q", checked="checked")
-          .modal-footer
-            button.btn.btn-primary Promote
+                    label.btn.btn-default.queen.active
+                      input(type="radio", name="promotion", value="Q", checked="checked")
+              .modal-footer
+                button.btn.btn-primary Promote
 
-    #forfeit-game.modal.fade(role="dialog")
-      .modal-dialog
-        .modal-content
-          .modal-body.text-center
-            h2 Zakończyć grę?
-          .modal-footer
-            button#cancel-forfeit.btn.btn-default Cofnij
-            button#confirm-forfeit.btn.btn-primary Zakończ
+        #forfeit-game.modal.fade(role="dialog")
+          .modal-dialog
+            .modal-content
+              .modal-body.text-center
+                h2 Zakończyć grę?
+              .modal-footer
+                button#cancel-forfeit.btn.btn-default Cofnij
+                button#confirm-forfeit.btn.btn-primary Zakończ
 
 
   footer
@@ -189,6 +191,7 @@ block content
   script(src="/socket.io/socket.io.js")
   script(src="/js/client.js")
   script(src="/js/fastclick.js")
+ 
   script.
     $(document).ready(function() {
       FastClick.attach(document.body);
@@ -197,4 +200,7 @@ block content
         playerColor : "#{playerColor}",
         playerName  : "#{playerName}"
       });
+      
+      
     });
+

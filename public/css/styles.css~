@@ -10,25 +10,6 @@ table { border-collapse: collapse; }
     padding-right: auto;
 }
 
-#messages{
-    margin-left: 50px;
-    padding: 10px;
-}
-
-#game { 
-    width: 400px;
-    margin-left: -100px; 
-}
-
-#Ruchy{
-    border: solid 2px orange;
-    width: 270px;
-    height: 320px;
-    overflow-y:scroll;
-    padding: 10px;
-    border-radius: 8px;
-}
-
 #banner h2{
     text-align: center;
 }
@@ -63,6 +44,11 @@ nav.navbar.navbar-inverse.navbar-static-top
     background-color: #99FF66; color: black;
     text-decoration: none;
 }
+
+
+#game { width: 400px; margin: 0 auto 0 auto; }
+
+
 
 #title-bar {
   font-size: 18px;
@@ -219,7 +205,6 @@ input#text{
      overflow: scroll;
     overflow-x: hidden;
 }
-
 
 
 
