@@ -1,0 +1,56 @@
+extends layout
+
+block content
+
+  #banner.jumbotron
+    h2 Szachy
+     
+
+  .container
+    .row        
+      .col-sm-6
+            ul#content
+            input#name(type='text', placeholder='Nick')
+                
+            input#text(type='text', placeholder='Wiadomosc...')
+                 
+            input#senden.btn.btn-primary(type='submit', value='Wyślij') 
+            
+        
+      .col-sm-6
+        h2 Nowa Gra
+        form#startForm(action="/start", method="POST", role="form")
+          .form-group
+            label Wybierz kolor
+            div
+              .btn-group(data-toggle="buttons")
+                label.btn.btn-default.active
+                  input(type="radio", name="player-color", value="white", checked="checked")
+                  | Białe
+                label.btn.btn-default
+                  input(type="radio", name="player-color", value="black")
+                  | Czarne
+          .form-group
+            label(for="playerName") Nick
+            input#playerName.form-control(type="text", name="player-name", placeholder="Player 1")
+          button.btn.btn-primary(type="submit") Rozpocznij grę
+        h2 Dołącz do gry
+        form#joinForm(action="/join", method="POST", role="form")
+          .form-group
+            label(for="gameID") ID Stołu
+            input#gameID.form-control(type="text", name="game-id")
+          .form-group
+            label(for="playerName") Nick
+            input#playerName.form-control(type="text", name="player-name", placeholder="Player 2")
+          button.btn.btn-primary(type="submit") Dołącz
+
+    
+    .container
+    
+    footer     
+    
+    
+   script(src="/js/jquery.min.js")
+  script(src="/js/bootstrap.min.js")
+  script(src="/socket.io/socket.io.js")
+  script(src="/js/chat.js")
